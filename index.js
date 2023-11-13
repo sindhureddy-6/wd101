@@ -82,16 +82,8 @@ let displayEntries = () => {
     ).join('\n');
     
     
-    let table = `<table> <tr>
- <th class="tableelement"> Name  </th>
- <th class="tableelement" > Email </th>
- <th class="tableelement">  Password  </th>
- <th class="tableelement" > DOB </th>
- <th  class="tableelement"> AcceptTerms&Conditions</th>
- </tr> ${tableEntries} </table>`;
-    
-    let div = document.getElementById("entries");
-    div.innerHTML = table;
+    let table = document.getElementById("entries");
+   table.insertAdjacentHTML('beforeend', tableEntries);
     
 }
 
